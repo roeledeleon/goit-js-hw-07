@@ -20,7 +20,7 @@ galleryItems.forEach((item) => {
   gallery.appendChild(listItem);
 });
 
-const modalOptions = {
+const optionsModal = {
   captionsData: "alt",
   captionDelay: 250,
 };
@@ -30,7 +30,7 @@ gallery.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.classList.contains("gallery__image")) {
     const imageUrl = event.target.getAttribute("data-source");
-    let gallery = new SimpleLightbox(".gallery a", modalOptions);
+    let gallery = new SimpleLightbox(".gallery a", optionsModal);
     gallery.on("show.simplelightbox", function () {
       // Do something…
     });
