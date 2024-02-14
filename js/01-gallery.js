@@ -21,12 +21,14 @@ galleryItems.forEach((item) => {
 });
 
 // Event delegation to Open Modal
-
 gallery.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.classList.contains("gallery__image")) {
-    const imageUrl = event.target.dataset.source;
-    const instance = basicLightbox.create(`img src="${imageUrl}" alt="image"`);
+    const imageUrl = event.target.getAttribute("data-source");
+    console.log(imageUrl);
+    const instance = basicLightbox.create(
+      `<img src="${imageUrl}" alt="image">`
+    );
     instance.show();
   }
 });
