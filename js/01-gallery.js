@@ -30,14 +30,11 @@ gallery.addEventListener("click", (event) => {
       `<img src="${imageUrl}" alt="image">`
     );
     instance.show();
-  }
-});
-
-window.addEventListener("keydown", (e) => {
-  console.log(e);
-  if (e.code === "Escape") {
-    alert("Hello");
-    instance.close();
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Escape") {
+        instance.close();
+      }
+    });
   }
 });
 
