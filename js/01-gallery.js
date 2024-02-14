@@ -28,7 +28,8 @@ gallery.addEventListener("click", (event) => {
   if (event.target.classList.contains("gallery__image")) {
     const imageUrl = event.target.dataset.source;
     console.log(imageUrl);
-    const instance = basicLightBox.create(`img src="${imageUrl})" alt="image"`);
+
+    const instance = basicLightBox.create(`img src="${imageUrl}" alt="image"`);
     instance.show();
   }
 });
