@@ -33,4 +33,12 @@ gallery.addEventListener("click", (event) => {
   }
 });
 
+window.addEventListener("keydown", (e) => {
+  console.log(e);
+  if (e.code === "Escape") {
+    alert("Hello");
+    instance.close();
+  }
+});
+
 console.log(galleryItems);
